@@ -14,10 +14,10 @@ jobs:
         working-directory: ./admin
         run: |
           flutter pub get
-          flutter test
+          flutter test test/widget_test.dart
       - name: Run tests for wallet
         working-directory: ./wallet
         run: |
           flutter pub get
-          flutter test
+          flutter test test/widget_test.dart
       
