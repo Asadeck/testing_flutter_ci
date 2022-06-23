@@ -3,15 +3,21 @@ on:
   pull_request:
 jobs:
   build:
-    name: Test
+    name: Testing
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./admin
     steps:
       - uses: actions/checkout@v2               # checkout the repo
       - uses: subosito/flutter-action@v2        # checkout the repo
         with:
           flutter-version: "3.0.2"
-      - run: flutter pub get
-      - run: flutter test
+      - name: Run tests for admin
+        working-directory: ./admin
+        run: |
+          flutter pub get
+          flutter test
+      - name: Run tests for wallet
+        working-directory: ./wallet
+        run: |
+          flutter pub get
+          flutter test
+      
