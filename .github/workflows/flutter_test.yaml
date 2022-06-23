@@ -5,6 +5,9 @@ jobs:
   build:
     name: Test
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./admin
     steps:
       - uses: actions/checkout@v2               # checkout the repo
       - uses: subosito/flutter-action@v2        # checkout the repo
