@@ -1,23 +1,16 @@
-name: 'Flutter Test'
+name: CI/CD Pipeline
 on:
   pull_request:
+
+
 jobs:
-  build:
-    name: Testing
+  test:
+    name: CI Pipeline
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2               # checkout the repo
-      - uses: subosito/flutter-action@v2        # checkout the repo
+      - uses: actions/checkout@v2
+      - name: TestProject Execute Jobs
+        uses: Mahan-F/test-project-action@v1
         with:
-          flutter-version: "3.0.2"
-      - name: Run tests for admin
-        working-directory: ./admin
-        run: |
-          flutter pub get
-          flutter test test/widget_test.dart
-      - name: Run tests for wallet
-        working-directory: ./wallet
-        run: |
-          flutter pub get
-          flutter test test/widget_test.dart
-      
+          project_id: LyJAr9hQCkutnpP3AWR59Q
+          api_key: oIlyzhlLPENDJrDmp_fPazWjEYtLs1h8MVvDfuS8ii81
