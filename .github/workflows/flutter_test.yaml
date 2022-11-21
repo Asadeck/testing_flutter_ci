@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: TestProject Execute Jobs
-        uses: Mahan-F/test-project-action@v1
+        uses: Mahan-F/test-project-action@v1.2.1
         with:
           project_id: LyJAr9hQCkutnpP3AWR59Q
           api_key: oIlyzhlLPENDJrDmp_fPazWjEYtLs1h8MVvDfuS8ii81
