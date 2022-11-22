@@ -21,5 +21,4 @@ jobs:
           open -a Simulator.app
           flutter pub get
           flutter test test/widget_test.dart
-          flutter test integration_test
 
