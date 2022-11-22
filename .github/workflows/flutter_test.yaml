@@ -18,7 +18,6 @@ jobs:
       - name: Run tests for wallet
         working-directory: ./wallet
         run: |
-          open -a Simulator.app
           flutter pub get
           flutter test test/widget_test.dart
 
