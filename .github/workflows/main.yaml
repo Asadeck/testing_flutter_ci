@@ -64,6 +64,7 @@ jobs:
           # instead of "channel: stable", you could be more precise by specifying the exact version of Flutter you're using:
           # flutter-version: '<FLUTTER_VERSION>'
       - name: Install Flutter dependencies
+        working-directory: ./wallet
         run: flutter pub get
       - name: Run integration tests
         # more info on https://github.com/ReactiveCircus/android-emulator-runner
