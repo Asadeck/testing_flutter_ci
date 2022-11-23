@@ -64,13 +64,12 @@ jobs:
           channel: stable
           # instead of "channel: stable", you could be more precise by specifying the exact version of Flutter you're using:
           # flutter-version: '<FLUTTER_VERSION>'
+      - uses: actions/setup-java@v2
+        with:
+          java-version: '11'
       - name: Install Flutter dependencies
         working-directory: ./wallet
         run: flutter pub get
-      - name: set java version
-        uses: actions/setup-java@v2
-        with:
-          java-version: '11'
       - name: Run integration tests
         # more info on https://github.com/ReactiveCircus/android-emulator-runner
         uses: reactivecircus/android-emulator-runner@v2
