@@ -67,6 +67,10 @@ jobs:
       - name: Install Flutter dependencies
         working-directory: ./wallet
         run: flutter pub get
+      - name: set java version
+        uses: actions/setup-java@v2
+        with:
+          java-version: '11'
       - name: Run integration tests
         # more info on https://github.com/ReactiveCircus/android-emulator-runner
         uses: reactivecircus/android-emulator-runner@v2
