@@ -7,7 +7,7 @@ name: main
 on:
   pull_request:
     branches:
-      - staging
+      - staging #onnly for staging branch
 
 # 2 jobs are configured.
 # The first one runs tests on iOS devices.
