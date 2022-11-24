@@ -1,7 +1,7 @@
 # .github/workflows/main.yml
 
 # Name of your workflow.
-name: main
+name: 'UI Testing'
 
 # Trigger the workflow manually or after push a commit
 on:
