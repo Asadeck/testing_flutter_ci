@@ -3,11 +3,12 @@
 # Name of your workflow.
 name: 'UI Testing'
 
-# Trigger the workflow manually or after push a commit
+# Trigger the workflow after a PR is made for staging or prod
 on:
   pull_request:
     branches:
       - staging
+      - prod
 
 # 2 jobs are configured.
 # The first one runs tests on iOS devices.
